@@ -369,7 +369,7 @@ synchronizes-with 关系只存在于原子类型操作上，如果一个数据�
 
 - 前一条语句中的所有操作都 [happens-before](https://en.cppreference.com/w/cpp/atomic/memory_order#Happens-before) 下一条语句中的所有操作。
 
-- 如果操作发生在同一语句中，一般不存在 [happens-before](https://en.cppreference.com/w/cpp/atomic/memory_order#Happens-before) 关系，因为它们是无序的。
+- 如果操作发生在同一语句中，一般不存在 [happens-before](https://en.cppreference.com/w/cpp/atomic/memory_order#Happens-before) 关系，因为它们是无序的。当然这也有例外，比如逗号表达式。
 
 ```
 void f(int x, int y)
